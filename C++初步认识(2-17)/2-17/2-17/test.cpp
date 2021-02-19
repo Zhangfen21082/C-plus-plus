@@ -88,13 +88,77 @@
 //	return 0;
 //}
 
-int add(int x, int y)
-{
-	return x + y;
-}
-int main()
-{
-	int ret = 0;
-	ret = add(1, 2);
-	return 0;
-}
+//int add(int x, int y)
+//{
+//	return x + y;
+//}
+//int main()
+//{
+//	int ret = 0;
+//	ret = add(1, 2);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a = 10;
+//	auto b = a;
+//	auto c = 's';
+//
+//	std::cout << typeid(b).name() << std::endl;
+//	std::cout << typeid(c).name() << std::endl;
+//
+//
+//	/*auto e;这样的写法是错误的，使用auto定义变量时必须初始化
+//		，否则编译器不知道这是什么类型的*/
+//	return 0;
+
+
+//int main()
+//{
+//	int x = 10;
+//	auto a1 = &x;//声明指针
+//	auto* a2 = &x;//声明指针
+//
+//	auto c1 = x;//声明为了int
+//	auto& c2 = x;//声明为了引用
+//
+//	std::cout << typeid(a1).name() << std::endl;
+//	std::cout << typeid(a2).name() << std::endl;
+//	std::cout << typeid(c1).name() << std::endl;
+//	std::cout << typeid(c2).name() << std::endl;
+//
+//	c2 = 20;
+//	std::cout << "x=" << x <<std::endl;
+//	std::cout << "c1=" << c1 <<std::endl;
+//
+//}
+
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5 };
+//	for (auto& x : arr)
+//		x *= 2;
+//
+//
+//	for (auto x : arr)
+//		std::cout << x << " ";
+//
+//}
+
+//void test(int)
+//{
+//	std::cout << "调用了f(int)"<< std::endl;
+//}
+//void test(int*)
+//{
+//	std::cout << "调用了f(int*)" << std::endl;
+//}
+//int main()
+//{
+//	test(0);
+//	test(nullptr);
+//	return 0;
+//
+//}

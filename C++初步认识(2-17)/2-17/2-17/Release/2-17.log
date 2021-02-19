@@ -1,6 +1,2 @@
-﻿  sum.cpp
-  test.cpp
-  正在生成代码
-  All 2 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  2-17.vcxproj -> C:\Users\zhangxing\Desktop\SOURCE\C-plus-plus\C++初步认识(2-17)\2-17\Release\2-17.exe
+﻿  test.cpp
+c:\users\zhangxing\desktop\source\c-plus-plus\c++初步认识(2-17)\2-17\2-17\test.cpp(113): error C3531: “e”: 类型包含“auto”的符号必须具有初始值设定项
