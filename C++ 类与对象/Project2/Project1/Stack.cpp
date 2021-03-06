@@ -72,40 +72,151 @@
 
 
 
-class Time
-{
-public:
-	Time(int hour)
-		:_hour(hour)
-	{
-		std::cout << "调用了Time的默认构造函数" << std::endl;
-	}
+//class Time
+//{
+//public:
+//	Time(int hour)
+//		:_hour(hour)
+//	{
+//		std::cout << "调用了Time的默认构造函数" << std::endl;
+//	}
+//
+//private:
+//		int _hour;
+//};
+//class Date
+//{
+//public:
+//	Date(int hour=10)
+//		:_t(hour)
+//		,_year(1998)
+//		,_month(12)
+//		,_day(20)
+//	{}
+//
+//private:
+//	int _year;
+//	int _month;
+//	int _day;
+//
+//	Time _t;
+//};
+//
+//int main()
+//{
+//
+//	Date d1(1000);
+//
+//
+//}
+//class A
+//{
+//public:
+//	A()//构造函数
+//	{
+//		++_cout;
+//	}
+//	A(const A& t)//拷贝构造
+//	{
+//		++_cout;
+//	}
+//	static int getcout()
+//	{
+//		return _cout;
+//	}
+//
+////private:
+//	static int _cout;
+//};
+//int A::_cout = 0;
+//
+//int main()
+//{
+//	A a1;
+//	A a2;
+//	A a3(a1);
+//	std::cout << A::getcout() << std::endl;
+//
+//
+//
+//}
 
-private:
-		int _hour;
-};
+//class sum
+//{
+//public:
+//	static void change()
+//	{
+//		_ret = 0;
+//		_i = 1;
+//	}
+//	sum()
+//	{
+//		_ret += _i;
+//		_i ++;
+//	}
+//	static int getret()
+//	{
+//		return _ret;
+//	}
+//
+//private:
+//	static int _ret;
+//	static int _i;
+//};
+//int sum::_ret = 0;
+//int sum::_i = 1;
+//
+//
+//class Solution {
+//public:
+//	int Sum_Solution(int n)
+//	{
+//		sum::change();
+//
+//		sum* p = new sum[n];
+//
+//
+//		return sum::getret();
+//	}
+//};
+//
+//int main()
+//{
+//	std::cout << Solution().Sum_Solution(1) << std::endl;
+//	std::cout << Solution().Sum_Solution(2) << std::endl;
+//	std::cout << Solution().Sum_Solution(3) << std::endl;
+//	std::cout << Solution().Sum_Solution(4) << std::endl;
+//	std::cout << Solution().Sum_Solution(5) << std::endl;
+//
+//
+//}
+
 class Date
 {
+friend std::ostream& operator<<(std::ostream& out, const Date& d);
 public:
-	Date(int hour=10)
-		:_t(hour)
-		,_year(1998)
-		,_month(12)
-		,_day(20)
+	Date(int year, int month, int day)
+		:_year(year)
+		,_month(month)
+		,_day(day)
 	{}
 
 private:
 	int _year;
 	int _month;
 	int _day;
-
-	Time _t;
 };
+
+std::ostream& operator<<(std::ostream& out, const Date& d)
+{
+	out << d._year << "-" << d._month << "-" << d._day;
+	return out;
+}
 
 int main()
 {
-
-	Date d1(1000);
-
+	Date d1(2000, 1, 1);
+	Date d2(2000, 1, 2);
+	std::cout << d1 <<std::endl<< d2;
 
 }
