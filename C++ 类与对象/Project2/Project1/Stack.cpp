@@ -304,16 +304,75 @@
 //	float* &c;
 //
 //}
+
+//istream& operator>>(istream& in, Date& d)
+//{
+//	in >> d._year;
+//	in >> d._month;
+//	in >> d._day;
+//	return in;
+//
+//}
+//using namespace std;
+//
+//class Date;//前置声明
+//class Time
+//{
+//	friend ostream& operator<<(ostream& out, Date& d);
+//	friend class Date;//Date类是Time类的友元
+//public:
+//	Time(int hour, int minute, int second)
+//		:_hour(hour)
+//		,_minute(minute)
+//		,_second(second)
+//	{}
+//private:
+//	int _hour;
+//	int _minute;
+//	int _second;
+//};
+//
+//
+//class Date
+//{
+//friend ostream& operator<<(ostream& out, Date& d);
+//public:
+//	Date(int year, int month, int day, int hour, int minute, int second)
+//		:_year(year)
+//		,_month(month)
+//		,_day(day)
+//		,_t(hour,minute,second)
+//	{}
+//private:
+//	int _year;
+//	int _month;
+//	int _day;
+//
+//	Time _t;
+//};
+//ostream& operator<<(ostream& out, Date& d)
+//{
+//	out << d._year << "年" << d._month << "月" << d._day << "日" <<
+//		" " << d._t._hour << "时" << d._t._minute << "分" << d._t._second << "秒";
+//	return out;
+//}
+//
+//int main()
+//{
+//	Date d1(1998, 12, 20,17,25,9);
+//	cout << d1;
+//	
+//}
+
 using namespace std;
 class Date
 {
 friend ostream& operator<<(ostream& out, Date& d);
-friend istream& operator>>(istream& in, Date& d);
 public:
 	Date(int year, int month, int day)
 		:_year(year)
-		,_month(month)
-		,_day(day)
+		, _month(month)
+		, _day(day)
 	{}
 private:
 	int _year;
@@ -322,21 +381,14 @@ private:
 };
 ostream& operator<<(ostream& out, Date& d)
 {
-	out << d._year << "年" << d._month << "月" << d._day << "日" << endl;
+	out << d._year << " " << d._month << " " << d._day << " " << endl;
+
 	return out;
 }
-istream& operator>>(istream& in, Date& d)
-{
-	in >> d._year;
-	in >> d._month;
-	in >> d._day;
-	return in;
 
-}
 int main()
 {
-	Date d1(1998, 12, 20);
-	cout << d1;
-	cin >> d1;
-	cout << d1;
+	Date d1(2000, 1, 1);
+	Date d2(1998, 12, 20);
+	cout << d1 << d2;
 }
