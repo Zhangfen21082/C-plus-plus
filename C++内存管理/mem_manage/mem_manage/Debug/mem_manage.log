@@ -1,2 +1,7 @@
 ﻿  test.cpp
+c:\users\zhangxing\desktop\source\c-plus-plus\c++内存管理\mem_manage\mem_manage\test.cpp(48): warning C4244: “参数”: 从“double”转换到“T”，可能丢失数据
+          with
+          [
+              T=int
+          ]
   mem_manage.vcxproj -> C:\Users\zhangxing\Desktop\SOURCE\C-plus-plus\C++内存管理\mem_manage\Debug\mem_manage.exe

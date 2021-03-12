@@ -1,32 +1,71 @@
 #include <iostream>
 using namespace std;
 
+//template<class T>
 
-class Date
+//class Stack
+//{
+//public:
+//	Stack()
+//		:_arr(new T[4])
+//		,_top(0)
+//		,_capacity(0)
+//	{}
+//	~Stack()
+//	{
+//		delete[] _arr;
+//		_arr = nullptr;
+//		_capacity=_top = 0;
+//	}
+//	void push(const T& arr);
+//
+//private:
+//	T* _arr;
+//	int _top;
+//	int	_capacity;
+//};
+
+//int main()
+//{
+//	Stack<int> s1;
+//	Stack<double> s2;
+//
+//}
+
+
+template<class T>
+
+class Stack
 {
 public:
-	Date()
-		:_year(1998)
-		,_month(12)
-		,_day(20)
+	Stack()
+		:_arr(new T[4])
+		,_top(0)
+		,_capacity(0)
+	{}
+	~Stack()
 	{
-		cout << "调用了构造函数" << endl;
+		delete[] _arr;
+		_arr = nullptr;
+		_capacity = _top = 0;
 	}
-	~Date()
-	{
-		cout << "调用了析构函数" << endl;
-	}
-	
+	void push(const T& arr);
 
 private:
-	int _year;
-	int _month;
-	int _day;
+	T* _arr;
+	int _top = 0;
+	int _capacity = 0;
 };
-
 int main()
 {
-	Date* p2 = new Date[5];
+	Stack<int> s1;
+	Stack<double> s1;
 
-	delete[] p2;
+}
+
+template<class T>
+void Stack<T>::push(const T& arr)
+{
+
+
 }
