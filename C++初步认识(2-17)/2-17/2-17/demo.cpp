@@ -15,5 +15,9 @@ int main()
 	//test();
 	test(99,88);
 	test(99,88);
+	test(99,88);
+	test(99,88);
+	test(99,88);
+	test(99,88);
 
 }
