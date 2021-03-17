@@ -123,13 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="demo.cpp" />
-    <ClCompile Include="sum.cpp" />
     <ClCompile Include="test.cpp" />
-    <ClCompile Include="源.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="sum.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

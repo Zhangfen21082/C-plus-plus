@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include "sum.h"
 
 
 ////int main()
@@ -162,3 +161,24 @@
 //	return 0;
 //
 //}
+
+using namespace std;
+int main()
+{
+	char str1[] = "Hello World";
+	char str2[] = "Hello World";
+
+	const char* str3 = "Hello World";
+	const char* str4 = "Hello World";
+
+	if (str1 == str2)
+		cout << "str1和str2相同" << endl;
+	else
+		cout << "str1和str2不相同" << endl;
+
+	if (str3 == str4)
+		cout << "str3和str4相同" << endl;
+	else
+		cout << "str3和str4不相同" << endl;
+
+}
