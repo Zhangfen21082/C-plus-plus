@@ -31,10 +31,61 @@ using namespace std;
 //	cout << suffix << endl;
 //
 //}
+//int main()
+//{
+//	string strText = "How are you?";
+//	string strSeparator = " ";
+//	string strResult;
+//	int size_pos = 0;
+//	int size_prev_pos = 0;
+//	while ((size_pos = strText.find_first_of(strSeparator, size_pos)) != string::npos)
+//	{
+//		strResult = strText.substr(size_prev_pos, size_pos - size_prev_pos);
+//		cout << strResult << " ";
+//		size_prev_pos = ++size_pos;
+//	}
+//
+//	if (size_prev_pos != strText.size())
+//	{
+//		strResult = strText.substr(size_prev_pos, size_pos - size_prev_pos);
+//		cout << strResult << " ";
+//	}
+//	cout << endl;
+//
+//	return 0;
+//
+//
+//}
+
+
+//int main()
+//{
+//	string str = "Hello Bit.";
+//	string::iterator it = str.begin();
+//	while (it != str.end())
+//	{
+//		if (*it != ' ')
+//			cout << *it;
+//		else
+//			str.erase(it);
+//		it++;
+//	}
+//	return 0;
+//
+//
+//}
+
 int main()
 {
-	int a = 10000000000000000000000000000000000000;
-	int b = 10000000000000000000000000000000000000;
-	cout << a + b << endl;
+	string test("Let's take LeetCode contest");
+	int start = 0;
+	size_t tail = test.find_first_of(" ");
+	while (tail != string::npos)
+	{
+		reverse(test.begin() + start, test.begin() + tail );
+		start = tail + 1;
+		tail = test.find_first_of(" ", tail + 1);
+	}
+	cout << test << endl;
 
 }
