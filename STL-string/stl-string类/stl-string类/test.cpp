@@ -75,17 +75,72 @@ using namespace std;
 //
 //}
 
+//int main()
+//{
+//	string test("Let's take LeetCode contest");
+//	int start = 0;
+//	size_t tail = test.find_first_of(" ");
+//	while (tail != string::npos)
+//	{
+//		reverse(test.begin() + start, test.begin() + tail );
+//		start = tail + 1;
+//		tail = test.find_first_of(" ", tail + 1);
+//	}
+//	cout << test << endl;
+//
+//}
+
+void getnext(string& target, int next[])
+{
+	int i = 0;
+	int k = -1;
+	next[0] = -1;
+	while (i < target.size() - 1)
+	{
+		if (k == -1 || target[i] == target[k])
+		{
+			i++;
+			k++;
+			next[i] = k;
+		}
+		else
+		{
+			k = next[k];
+		}
+	}
+
+}
+int strStr(string haystack, string needle)
+{
+	int* next = new int[needle.size()];
+	int i = 0;
+	int j = 0;
+	getnext(needle, next);
+	int m = haystack.size();
+	int n = needle.size();
+
+	while (i<m && j<n )
+	{
+		if (haystack[i] == needle[j] || j == -1)
+		{
+
+			i++;
+			j++;
+
+		}
+		else
+		{
+			j = next[j];
+		}
+	}
+
+	if (j >= needle.size())
+		return i - (needle.size() - 1);
+	else
+		return -1;
+}
 int main()
 {
-	string test("Let's take LeetCode contest");
-	int start = 0;
-	size_t tail = test.find_first_of(" ");
-	while (tail != string::npos)
-	{
-		reverse(test.begin() + start, test.begin() + tail );
-		start = tail + 1;
-		tail = test.find_first_of(" ", tail + 1);
-	}
-	cout << test << endl;
+	strStr("hello", "ll");
 
 }
