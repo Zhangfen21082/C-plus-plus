@@ -90,57 +90,74 @@ using namespace std;
 //
 //}
 
-void getnext(string& target, int next[])
-{
-	int i = 0;
-	int k = -1;
-	next[0] = -1;
-	while (i < target.size() - 1)
-	{
-		if (k == -1 || target[i] == target[k])
-		{
-			i++;
-			k++;
-			next[i] = k;
-		}
-		else
-		{
-			k = next[k];
-		}
-	}
+//void getnext(string& target, int next[])
+//{
+//	int i = 0;
+//	int k = -1;
+//	next[0] = -1;
+//	while (i < target.size() - 1)
+//	{
+//		if (k == -1 || target[i] == target[k])
+//		{
+//			i++;
+//			k++;
+//			next[i] = k;
+//		}
+//		else
+//		{
+//			k = next[k];
+//		}
+//	}
+//
+//}
+//int strStr(string haystack, string needle)
+//{
+//	int* next = new int[needle.size()];
+//	int i = 0;
+//	int j = 0;
+//	getnext(needle, next);
+//	int m = haystack.size();
+//	int n = needle.size();
+//
+//	while (i<m && j<n )
+//	{
+//		if (haystack[i] == needle[j] || j == -1)
+//		{
+//
+//			i++;
+//			j++;
+//
+//		}
+//		else
+//		{
+//			j = next[j];
+//		}
+//	}
+//
+//	if (j >= needle.size())
+//		return i - (needle.size() - 1);
+//	else
+//		return -1;
+//}
+//int main()
+//{
+//	strStr("hello", "ll");
+//
+//}
 
-}
-int strStr(string haystack, string needle)
-{
-	int* next = new int[needle.size()];
-	int i = 0;
-	int j = 0;
-	getnext(needle, next);
-	int m = haystack.size();
-	int n = needle.size();
+//struct st
+//{
+//	int x;
+//	int* y;
+//
+//}*pt;
+//int a[] = { 1,2 };
+//int b[] = { 3,4 };
 
-	while (i<m && j<n )
-	{
-		if (haystack[i] == needle[j] || j == -1)
-		{
-
-			i++;
-			j++;
-
-		}
-		else
-		{
-			j = next[j];
-		}
-	}
-
-	if (j >= needle.size())
-		return i - (needle.size() - 1);
-	else
-		return -1;
-}
 int main()
 {
-	strStr("hello", "ll");
+	int a = 1, b;
+	b = (++a) + (++a);
+	printf("%d\n", b);
 
 }
