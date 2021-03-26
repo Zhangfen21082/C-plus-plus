@@ -156,8 +156,5 @@ using namespace std;
 
 int main()
 {
-	int a = 1, b;
-	b = (++a) + (++a);
-	printf("%d\n", b);
-
+	string arr[4];
 }
