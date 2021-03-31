@@ -154,7 +154,76 @@ using namespace std;
 //int a[] = { 1,2 };
 //int b[] = { 3,4 };
 
+
+//string replaceSpaces(string S, int length)
+//{
+//	int length_bak = length;
+//	int i = 0;
+//	int real_space = 0;;
+//	while (length_bak--)//统计有效的空格
+//	{
+//		if (S[i] == ' ')
+//			real_space++;
+//		i++;
+//	}
+//
+//	string ret;
+//	ret.resize(length + 2 * real_space + 1);//多申请一个空格存放'\0'
+//
+//	int j = length - 1;
+//	int k = ret.size() - 2;//这里-2
+//
+//	while (k >= 0)
+//	{
+//		if (S[j] != ' ')
+//		{
+//			ret[k--] = S[j--];
+//		}
+//		else
+//		{
+//			ret[k--] = '0';
+//			ret[k--] = '2';
+//			ret[k--] = '%';
+//			j--;
+//		}
+//	}
+//
+//	return ret;
+//}
+class Solution {
+public:
+	bool buddyStrings(string a, string b)
+	{
+		int i = 0;
+		int j = 0;
+		while (i < a.size() && j < b.size())
+		{
+			if (a[i] == b[j])
+			{
+				i++;
+				j++;
+			}
+			else
+				break;
+		}
+
+		if (i + 1 < a.size() && b[j] != a[i + 1])
+			return false;
+		else
+		{
+			string a_front(a.substr(0,i));
+			string b_front(b.substr(0,j));
+			string a_back(a.substr(i + 2));
+			string b_back(b.substr(j + 2));
+			if (a_front == b_front && a_back == b_back)
+				return true;
+		}
+		return false;
+
+
+	}
+};
 int main()
 {
-	string arr[4];
+	return 0;
 }

@@ -1,2 +1,4 @@
 ﻿  test.cpp
+c:\users\zhangxing\desktop\source\c-plus-plus\stl-string\stl-string类\stl-string类\test.cpp(199): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\zhangxing\desktop\source\c-plus-plus\stl-string\stl-string类\stl-string类\test.cpp(210): warning C4018: “<”: 有符号/无符号不匹配
   stl-string类.vcxproj -> C:\Users\zhangxing\Desktop\SOURCE\C-plus-plus\STL-string\stl-string类\Debug\stl-string类.exe
